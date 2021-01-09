@@ -1,0 +1,13 @@
+.mainDiv.daTas > div{
+    color: green !important;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainDiv h3{
+    color: blue;
+
+}.alm{
+    color: crimson;
+}
+

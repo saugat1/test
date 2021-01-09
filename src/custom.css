@@ -1,0 +1,13 @@
+.container{
+    height: 80vh !important;
+    padding-top: 140px;
+}
+
+.container img{
+    max-height: 280px;
+    width: auto;
+}
+.container .btn{
+    border-radius: 35px;
+    padding: 10px 31px;
+}

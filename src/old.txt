@@ -1,0 +1,212 @@
+// import App, { name, cast, study } from "./App";
+import Card from "./Card";
+import one from "./img/1.jpg";
+import two from "./img/2.jpg";
+import three from "./img/3.jpg";
+import four from "./img/4.jpg";
+import five from "./img/5.jpg";
+import six from "./img/6.jpg";
+import ten from "./img/10.jpg";
+import seven from "./img/7.jpg";
+import eight from "./img/8.jpg";
+import nine from "./img/9.jpg";
+import eleven from "./img/11.jpg";
+import twelve from "./img/12.jpeg";
+import thirteen from "./img/13.jpg";
+import fourteen from "./img/14.jpg";
+// import './index.css';
+// import Test from "./Test.jsx";
+// import Bnavbar from "./Bnavbar";
+// import Hero from "./Hero";
+
+let datas = [
+  {
+    src: one,
+    name: "samsumg A10",
+    author: 258,
+  },
+  {
+    src: two,
+    name: "Bramand 897",
+    author: 153,
+  },
+  {
+    src: three,
+    name: "Huaweri 54647",
+    author: 878,
+  },
+  {
+    src: four,
+    name: "Ios 258",
+    author: 5478,
+  },
+  {
+    src: five,
+    name: "Oppo sm A10",
+    author: 5454,
+  },
+  {
+    src: six,
+    name: "Vivo pro 15",
+    author: 2580,
+  },
+  {
+    src: seven,
+    name: "Vivo pro 15",
+    author: 2580,
+  },
+  {
+    src: eight,
+    name: "Vivo pro 15",
+    author: 2580,
+  },
+  {
+    src: nine,
+    name: "Vivo pro 15",
+    author: 2580,
+  },
+  {
+    src: ten,
+    name: "Vivo pro 15",
+    author: 2580,
+  },
+  {
+    src: eleven,
+    name: "Vivo pro 15",
+    author: 2580,
+  },
+  {
+    src: twelve,
+    name: "aolo The Hampore",
+    author: "holo changadi",
+  },
+  {
+    src: thirteen,
+    name: "Danger man 20",
+    author: "the master",
+  },
+  {
+    src: fourteen,
+    name: "DARK PRO MAN",
+    author: "william ",
+  },
+];
+
+function iterates() {
+  return datas.map((item, index) => {
+    return <Card src={item.src} name={item.name} author={item.author} />;
+  });
+}
+
+function data() {
+  return (
+    <div className="container px-1 px-md-5 bg-light">
+      <div className="row">
+        {iterates()}
+       
+      </div>
+    </div>
+  );
+}
+// 
+
+ {inititalData.length < 1 ? (
+        <div className="container">
+          <div className="row py-5">
+            <div className="col-12 text-center">
+              <h2>Nothing In Your Cart.</h2>
+              <div className="mt-5">
+                <NavLink
+                  className="btn"
+                  style={{
+                    borderRadius: "0",
+                    background: "var(--secondary-color)",
+                  }}
+                  to="/"
+                >
+                  Add Item
+                </NavLink>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        inititalData.cartItems.map((item) => {
+          return (
+            <div className="container">
+              <div className="row py-5">
+                <div className="col-12">
+                  <h4> {inititalData.cartItems.length} Items in Your Cart. </h4>
+                  <table className="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>S.n</th>
+                        <th>Name</th>
+                        <th>Picture</th>
+                        <th>Price (Rs)</th>
+                        <th>Quantity</th>
+                        <th>Total(Rs)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {inititalData.cartItems.map((item, index) => {
+                        return (
+                          <tr key={index}>
+                            <td>{index + 1}</td>
+                            <td id="title">{item.name}</td>
+                            <td>
+                              <img src={item.img} alt="sd" height="70" />
+                            </td>
+                            <td className="p">{item.price}</td>
+                            <td>
+                              {" "}
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                style={{ maxWidth: "80px" }}
+                                defaultValue={item.qty}
+                                className="form-control quantity"
+                              />{" "}
+                            </td>
+                            <td id="price">{item.price * item.qty}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                  <div className="py-3 text-right">
+                    <h5>
+                      All Total : Rs. <span id="total">45</span>{" "}
+                    </h5>
+                  </div>
+                  <div className="mt-4 float-right">
+                    <NavLink
+                      className="btn"
+                      style={{
+                        borderRadius: "0",
+                        background: "var(--secondary-color",
+                      }}
+                      to="/"
+                    >
+                      {" "}
+                      Contionue Shopping{" "}
+                    </NavLink>
+                    <NavLink
+                      className="btn ml-2"
+                      style={{
+                        borderRadius: "0",
+                        background: "var(--secondary-color",
+                      }}
+                      to="/Checkout"
+                    >
+                      {" "}
+                      Check Out{" "}
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      )}

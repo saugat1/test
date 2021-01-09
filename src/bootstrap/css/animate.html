@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animate</title>
+	<style>
+		.btn{
+			color: purple;
+			border: 1px solid purple;
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+			padding: 10px 14px;
+		}
+		a{
+			text-decoration: none;
+			color: purple;
+		}
+		.btn:after{
+			position: absolute;
+			content: "";
+			background: purple;
+			width: 0%;
+			height: 100%;
+			transition: all 0.5s ease 0s;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+		.btn:hover{
+			color: white;
+		}
+		.btn:hover:after{
+		width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<a href="#" class="btn">OMG BOY HOW</a>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+.myclass{
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 25px #888;
+}
+
+.testName{
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 25px #888;
+    margin: 12px auto;
+}
